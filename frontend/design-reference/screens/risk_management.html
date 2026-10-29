@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;background-color:#0d1322;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#2eeb90", "on-tertiary-fixed-variant": "#00522e", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#00210f", "background": "#0d1322", "on-primary-container": "#00616f", "on-surface": "#dde2f7", "on-secondary-container": "#baaeff", "secondary-fixed": "#e5deff", "on-primary-fixed-variant": "#004e5a", "surface-bright": "#333949", "inverse-surface": "#dde2f7", "error": "#ffb4ab", "secondary": "#c9bfff", "on-primary-fixed": "#001f25", "error-container": "#93000a", "surface-container-low": "#151b2a", "surface-container": "#191f2f", "surface-container-lowest": "#080e1c", "on-secondary": "#2e009c", "inverse-primary": "#006877", "surface": "#0d1322", "surface-container-high": "#242a3a", "primary-fixed-dim": "#14d9f6", "on-tertiary-container": "#006539", "on-primary": "#00363e", "on-background": "#dde2f7", "on-secondary-fixed-variant": "#441cc8", "tertiary-fixed-dim": "#1ce289", "on-tertiary": "#00391e", "on-error": "#690005", "on-secondary-fixed": "#1a0063", "surface-variant": "#2f3445", "surface-tint": "#14d9f6", "primary-container": "#2de2ff", "surface-container-highest": "#2f3445", "secondary-fixed-dim": "#c9bfff", "on-surface-variant": "#bac9cd", "outline-variant": "#3b494c", "surface-dim": "#0d1322", "tertiary": "#a0ffc0", "primary": "#c2f3ff", "secondary-container": "#4720ca", "primary-fixed": "#a3eeff", "tertiary-fixed": "#58ffa5", "outline": "#859397", "inverse-on-surface": "#2a3040" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "0.75rem", "space-md": "0.75rem", "space-xs": "0.25rem", "space-lg": "1rem", "margin": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem" }, fontFamily: { "title-lg": ["Plus Jakarta Sans"], "title-mono": ["JetBrains Mono"], "label-regular": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "caption-caps": ["JetBrains Mono"], "body-medium": ["Plus Jakarta Sans"], "telemetry-sm": ["JetBrains Mono"], "body-mono": ["JetBrains Mono"], "display-hero-mono": ["JetBrains Mono"], "body-default": ["Plus Jakarta Sans"], "caption-ui": ["Plus Jakarta Sans"] }, fontSize: { "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "title-mono": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "label-regular": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "display-hero": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "caption-caps": ["11px", { "lineHeight": "14px", "fontWeight": "600" }], "body-medium": ["15px", { "lineHeight": "22px", "fontWeight": "500" }], "telemetry-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "body-mono": ["15px", { "lineHeight": "22px", "fontWeight": "500" }], "display-hero-mono": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "body-default": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "caption-ui": ["12px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="MEGATRON Emblem" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VgHmIWB9AZ-w9ywkDptfAK7Hx76pW_tZM0p4qMgCnZBV_rc6GXsqzUQVuzDIPeCmOjRiDtoo3LEpvN-9stTcfX87efm6H5ZKu--HkE7hsrqf411_6fTU0dmMdfRpaL354IMq4D1Dy903t_gRfFww5Z3R9cosYfNAq5bUsgAE-SCCNm8VhMsF-2qcOhWzEa3RZr9PT3cvdtnkHBEokES7A2dSdQmnefSRg8AoqfiKA"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-mono text-headline-md tracking-wider text-primary-container drop-shadow-[0_0_8px_rgba(45,226,255,0.4)]">MEGATRON</span><span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim bg-surface-container-high/60 px-1.5 py-0.5 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>12ms</span></div><span class="font-label-regular text-caption-ui text-on-surface-variant truncate">Home</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="flex items-center gap-1.5 px-2 py-1 rounded-full bg-error-container/30"><span class="w-2 h-2 rounded-full bg-error animate-ping"></span><span class="font-caption-caps text-caption-caps text-error tracking-widest">LIVE</span></div><button class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_#2de2ff]"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-12 space-y-space-lg">
+<!-- Micro Breadcrumb & Protocol Status -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified_user</span>
+<span class="font-caption-caps text-caption-caps tracking-widest text-primary-container uppercase">Execution Shield 4.2</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary">ENFORCING</span>
+</div>
+</div>
+<!-- Hero: Dynamic Risk Preview Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-xl shadow-surface-container-lowest/80">
+<div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-gradient-to-br from-primary-container/10 via-secondary-container/15 to-transparent blur-2xl pointer-events-none"></div>
+<div class="absolute -left-6 -bottom-6 w-28 h-28 rounded-full bg-tertiary-container/10 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant uppercase tracking-wider block mb-1">Baseline Balance</span>
+<div class="font-title-mono text-title-mono text-on-surface flex items-baseline gap-1.5">
+<span>$10,482.50</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">USD</span>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-full bg-surface-container-high flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[14px]">tune</span>
+<span class="font-caption-caps text-caption-caps text-tertiary tracking-wider" id="preview-mode-tag">1.0% RISK</span>
+</div>
+</div>
+<!-- Projection Telemetry Box -->
+<div class="p-space-md rounded-lg bg-surface-container/70 flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-caption-ui text-caption-ui flex items-center gap-1">
+<span class="material-symbols-outlined text-error text-[15px]">arrow_downward</span> Max Risk / Trade
+          </span>
+<span class="font-body-mono text-body-mono text-error font-semibold" id="preview-max-loss">-$104.82</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption-ui text-caption-ui text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[15px]">arrow_upward</span> Target 3.2:1 Yield
+          </span>
+<span class="font-body-mono text-body-mono text-tertiary font-bold" id="preview-target-profit">+$335.42</span>
+</div>
+</div>
+<!-- Real-time Ratio Bar Visualization -->
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between font-caption-caps text-caption-caps text-on-surface-variant">
+<span>RISK PROFILE (1.0% vs 3.2% PROFIT)</span>
+<span class="text-primary-container font-mono">3.2 : 1 R:R</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-error rounded-l-full transition-all duration-300" id="risk-bar" style="width: 24%"></div>
+<div class="h-full w-0.5 bg-surface-container-lowest"></div>
+<div class="h-full bg-tertiary-container rounded-r-full transition-all duration-300" id="profit-bar" style="width: 76%"></div>
+</div>
+<p class="font-caption-ui text-caption-ui text-on-surface-variant/80 pt-0.5 leading-tight">
+          Bot automatically clamps lot size to keep stop loss strictly capped to selected capital threshold.
+        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Parameters Container -->
+<div class="flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-xs px-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">equalizer</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Telemetry Allocations</h2>
+</div>
+<!-- 1. Risk Per Trade -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col space-y-space-md shadow-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold block">Risk Per Trade</span>
+<span class="font-caption-ui text-caption-ui text-on-surface-variant">Recommended: 0.5% - 1.5% for 5m scalp</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1 rounded-lg">
+<span class="font-title-mono text-title-mono text-primary-container" id="risk-val-text">1.0%</span>
+</div>
+</div>
+<div class="space-y-2">
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" id="risk-slider" max="3.0" min="0.25" step="0.25" type="range" value="1.0"/>
+<div class="flex justify-between font-caption-caps text-caption-caps text-on-surface-variant/70">
+<span>0.25% (ULTRA-SAFE)</span>
+<span>1.5% (OPTIMAL)</span>
+<span>3.0% (AGGRESSIVE)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-caption-ui text-caption-ui text-on-surface-variant">Adjust Precision</span>
+<div class="flex items-center gap-2 bg-surface-container-high rounded-full p-1">
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant active:scale-95 transition-transform" id="risk-dec">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-body-mono text-body-mono text-on-surface px-1.5" id="risk-stepper-val">1.0%</span>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant active:scale-95 transition-transform" id="risk-inc">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 2. Max Daily Drawdown / Loss -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col space-y-space-md shadow-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold block">Max Daily Drawdown</span>
+<span class="font-caption-ui text-caption-ui text-error" id="drawdown-currency-sub">-$314.47 threshold</span>
+</div>
+<div class="bg-surface-container px-2.5 py-1 rounded-lg">
+<span class="font-title-mono text-title-mono text-error" id="drawdown-val-text">3.0%</span>
+</div>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-error" id="drawdown-slider" max="6.0" min="1.0" step="0.5" type="range" value="3.0"/>
+<div class="pt-2 flex items-center justify-between bg-surface-container/60 p-space-md rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">power_settings_new</span>
+<div>
+<span class="font-caption-ui text-caption-ui text-on-surface font-medium block">Auto-Halt Bot Protocol</span>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant">TERMINATES ACTIVE BOT WHEN HIT</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="halt-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-error"></div>
+</label>
+</div>
+</div>
+<!-- 3. Twin Stepper Grid: Max Open Trades & Trades Per Day -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Max Concurrent Trades -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between space-y-space-md shadow-md">
+<div>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant tracking-wider uppercase block">Max Open Orders</span>
+<span class="font-caption-ui text-caption-ui text-on-surface-variant">Cap: 4 active</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface active:scale-90 transition-transform" id="open-trades-dec">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-title-mono text-title-mono text-primary-container" id="open-trades-count">2</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface active:scale-90 transition-transform" id="open-trades-inc">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<!-- Max Trades Per Day -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between space-y-space-md shadow-md">
+<div>
+<span class="font-caption-caps text-caption-caps text-on-surface-variant tracking-wider uppercase block">Max Daily Fills</span>
+<span class="font-caption-ui text-caption-ui text-on-surface-variant">Overtrade shield</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface active:scale-90 transition-transform" id="daily-trades-dec">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-title-mono text-title-mono text-primary-container" id="daily-trades-count">6</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface active:scale-90 transition-transform" id="daily-trades-inc">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 4. Algorithmic Bounds & Spread Tolerance -->
+<div class="p-space-lg rounded-xl bg-surface-container-low space-y-space-md shadow-md">
+<!-- Minimum Risk:Reward (Locked) -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container/30 p-space-md rounded-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">Min Risk:Reward</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+</div>
+<span class="font-caption-caps text-caption-caps text-secondary-fixed-dim">SYSTEM ENFORCED BY CORE LOGIC</span>
+</div>
+<div class="px-3 py-1 rounded-md bg-secondary-container/40 flex items-center">
+<span class="font-title-mono text-title-mono text-secondary">3.0 : 1</span>
+</div>
+</div>
+<!-- Max Allowed Spread Threshold -->
+<div class="flex items-center justify-between pt-1">
+<div>
+<span class="font-body-medium text-body-medium text-on-surface font-semibold block">Max Spread Slippage</span>
+<span class="font-caption-ui text-caption-ui text-on-surface-variant">Aborts entry if spread expands</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high rounded-full p-1">
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant active:scale-95 transition-transform" id="spread-dec">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-body-mono text-body-mono text-on-surface px-1.5" id="spread-val-text">2.5 pips</span>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant active:scale-95 transition-transform" id="spread-inc">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Circuit Breaker & Loss Protection -->
+<div class="flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-xs px-1">
+<span class="material-symbols-outlined text-error text-[20px]">electric_bolt</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Circuit Breakers</h2>
+</div>
+<!-- Consecutive Loss Guardian -->
+<div class="p-space-lg rounded-xl bg-surface-container-low space-y-space-md shadow-md">
+<div class="flex items-start justify-between">
+<div class="pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">Loss Streak Cool-Off</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-caption-caps bg-tertiary-container/20 text-tertiary">SHIELD</span>
+</div>
+<span class="font-caption-ui text-caption-ui text-on-surface-variant">Halts aggressive tilt when market chops</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" id="cb-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary-fixed-dim"></div>
+</label>
+</div>
+<!-- Detail Steppers Container -->
+<div class="p-space-md rounded-lg bg-surface-container/70 flex flex-col space-y-space-md" id="cb-details">
+<div class="flex items-center justify-between">
+<span class="font-caption-ui text-caption-ui text-on-surface">Consecutive Stop Losses</span>
+<div class="flex items-center gap-2 bg-surface-container-high rounded-full p-1">
+<button class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90" id="losses-dec">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="font-body-mono text-body-mono text-on-surface px-1" id="losses-val-text">2</span>
+<button class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90" id="losses-inc">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption-ui text-caption-ui text-on-surface">Quarantine Pause Duration</span>
+<div class="flex items-center gap-2 bg-surface-container-high rounded-full p-1">
+<button class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90" id="pause-dec">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</button>
+<span class="font-body-mono text-body-mono text-on-surface px-1" id="pause-val-text">4 hrs</span>
+<button class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90" id="pause-inc">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Daily Profit Milestone Lock -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex items-center justify-between shadow-md">
+<div class="pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-on-surface font-semibold">Daily Profit Auto-Lock</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+</div>
+<span class="font-caption-ui text-caption-ui text-on-surface-variant">Lock all profits after reaching +5.0% gain</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input class="sr-only peer" id="profit-lock-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Master Risk Engine Dispatch & Save Action Bar -->
+<div class="pt-space-md flex flex-col space-y-space-md">
+<!-- Primary CTA with Megatron Glow -->
+<button class="w-full h-12 rounded-full bg-gradient-to-r from-primary-container via-primary-fixed-dim to-secondary-container flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(45,226,255,0.4),0_0_12px_rgba(123,97,255,0.45)] hover:brightness-110 active:scale-[0.98] transition-all" id="save-risk-btn">
+<span class="material-symbols-outlined text-surface-container-lowest font-bold text-[20px]">security_update_good</span>
+<span class="font-caption-caps text-caption-caps tracking-wider text-surface-container-lowest font-bold">SAVE &amp; DEPLOY RISK LIMITS</span>
+</button>
+<!-- Secondary Ghost Reset -->
+<button class="w-full h-11 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface active:scale-[0.98] flex items-center justify-center gap-1.5 transition-colors" id="reset-defaults-btn">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span class="font-caption-caps text-caption-caps tracking-wider">RESET TO INSTITUTIONAL DEFAULTS</span>
+</button>
+<!-- Hard Legal / Protocol Disclaimer -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest/80 text-center">
+<p class="font-caption-ui text-caption-ui text-on-surface-variant/70 leading-relaxed">
+        Autonomous trading protocol warning: System risk management enforcement strictly overrides manual interventions and off-chain execution hooks.
+      </p>
+</div>
+</div>
+<!-- Toast Notification Feedback (Hidden initially) -->
+<div class="fixed bottom-20 left-4 right-4 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex justify-center" id="status-toast">
+<div class="px-4 py-2.5 rounded-full bg-surface-container-highest shadow-2xl flex items-center gap-2 shadow-black">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-caption-caps text-caption-caps text-on-surface" id="toast-message">PARAMETERS SECURED IN MEMORY</span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const baselineBalance = 10482.50;
+
+    // Elements
+    const riskSlider = document.getElementById('risk-slider');
+    const riskValText = document.getElementById('risk-val-text');
+    const riskStepperVal = document.getElementById('risk-stepper-val');
+    const riskDecBtn = document.getElementById('risk-dec');
+    const riskIncBtn = document.getElementById('risk-inc');
+    const previewModeTag = document.getElementById('preview-mode-tag');
+    const previewMaxLoss = document.getElementById('preview-max-loss');
+    const previewTargetProfit = document.getElementById('preview-target-profit');
+    const riskBar = document.getElementById('risk-bar');
+    const profitBar = document.getElementById('profit-bar');
+
+    const drawdownSlider = document.getElementById('drawdown-slider');
+    const drawdownValText = document.getElementById('drawdown-val-text');
+    const drawdownCurrencySub = document.getElementById('drawdown-currency-sub');
+
+    const openTradesCount = document.getElementById('open-trades-count');
+    const openTradesDec = document.getElementById('open-trades-dec');
+    const openTradesInc = document.getElementById('open-trades-inc');
+
+    const dailyTradesCount = document.getElementById('daily-trades-count');
+    const dailyTradesDec = document.getElementById('daily-trades-dec');
+    const dailyTradesInc = document.getElementById('daily-trades-inc');
+
+    const spreadValText = document.getElementById('spread-val-text');
+    const spreadDec = document.getElementById('spread-dec');
+    const spreadInc = document.getElementById('spread-inc');
+
+    const lossesValText = document.getElementById('losses-val-text');
+    const lossesDec = document.getElementById('losses-dec');
+    const lossesInc = document.getElementById('losses-inc');
+
+    const pauseValText = document.getElementById('pause-val-text');
+    const pauseDec = document.getElementById('pause-dec');
+    const pauseInc = document.getElementById('pause-inc');
+
+    const saveBtn = document.getElementById('save-risk-btn');
+    const resetBtn = document.getElementById('reset-defaults-btn');
+    const toast = document.getElementById('status-toast');
+    const toastMsg = document.getElementById('toast-message');
+
+    // Values State
+    let state = {
+      riskPercent: 1.0,
+      drawdownPercent: 3.0,
+      openTrades: 2,
+      dailyTrades: 6,
+      spreadPips: 2.5,
+      lossStreak: 2,
+      pauseHours: 4
+    };
+
+    function showToast(text) {
+      if (!toast) return;
+      toastMsg.textContent = text;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+
+    function renderRiskCalculations() {
+      const riskRatio = 3.2;
+      const maxLoss = (baselineBalance * (state.riskPercent / 100));
+      const targetProfit = maxLoss * riskRatio;
+
+      riskValText.textContent = state.riskPercent.toFixed(2).replace(/\.00$/, '.0') + '%';
+      riskStepperVal.textContent = state.riskPercent.toFixed(2).replace(/\.00$/, '.0') + '%';
+      previewModeTag.textContent = state.riskPercent.toFixed(1) + '% RISK';
+      previewMaxLoss.textContent = '-$' + maxLoss.toFixed(2);
+      previewTargetProfit.textContent = '+$' + targetProfit.toFixed(2);
+
+      // Bar proportions
+      const riskWeight = state.riskPercent * 24;
+      const profitWeight = Math.min(80, (state.riskPercent * riskRatio * 20));
+      riskBar.style.width = Math.max(15, Math.min(45, riskWeight)) + '%';
+      profitBar.style.width = (100 - parseFloat(riskBar.style.width)) + '%';
+
+      riskSlider.value = state.riskPercent;
+    }
+
+    function renderDrawdown() {
+      const ddLoss = (baselineBalance * (state.drawdownPercent / 100));
+      drawdownValText.textContent = state.drawdownPercent.toFixed(1) + '%';
+      drawdownCurrencySub.textContent = '-$' + ddLoss.toFixed(2) + ' threshold';
+      drawdownSlider.value = state.drawdownPercent;
+    }
+
+    // Risk listeners
+    riskSlider.addEventListener('input', (e) => {
+      state.riskPercent = parseFloat(e.target.value);
+      renderRiskCalculations();
+    });
+
+    riskDecBtn.addEventListener('click', () => {
+      if (state.riskPercent > 0.25) {
+        state.riskPercent = Math.max(0.25, state.riskPercent - 0.25);
+        renderRiskCalculations();
+      }
+    });
+
+    riskIncBtn.addEventListener('click', () => {
+      if (state.riskPercent < 3.0) {
+        state.riskPercent = Math.min(3.0, state.riskPercent + 0.25);
+        renderRiskCalculations();
+      }
+    });
+
+    // Drawdown slider
+    drawdownSlider.addEventListener('input', (e) => {
+      state.drawdownPercent = parseFloat(e.target.value);
+      renderDrawdown();
+    });
+
+    // Open Trades
+    openTradesDec.addEventListener('click', () => {
+      if (state.openTrades > 1) {
+        state.openTrades--;
+        openTradesCount.textContent = state.openTrades;
+      }
+    });
+    openTradesInc.addEventListener('click', () => {
+      if (state.openTrades < 4) {
+        state.openTrades++;
+        openTradesCount.textContent = state.openTrades;
+      }
+    });
+
+    // Daily Trades
+    dailyTradesDec.addEventListener('click', () => {
+      if (state.dailyTrades > 2) {
+        state.dailyTrades -= 2;
+        dailyTradesCount.textContent = state.dailyTrades;
+      }
+    });
+    dailyTradesInc.addEventListener('click', () => {
+      if (state.dailyTrades < 20) {
+        state.dailyTrades += 2;
+        dailyTradesCount.textContent = state.dailyTrades;
+      }
+    });
+
+    // Spread
+    spreadDec.addEventListener('click', () => {
+      if (state.spreadPips > 0.5) {
+        state.spreadPips = parseFloat((state.spreadPips - 0.5).toFixed(1));
+        spreadValText.textContent = state.spreadPips + ' pips';
+      }
+    });
+    spreadInc.addEventListener('click', () => {
+      if (state.spreadPips < 5.0) {
+        state.spreadPips = parseFloat((state.spreadPips + 0.5).toFixed(1));
+        spreadValText.textContent = state.spreadPips + ' pips';
+      }
+    });
+
+    // Consecutive Losses
+    lossesDec.addEventListener('click', () => {
+      if (state.lossStreak > 1) {
+        state.lossStreak--;
+        lossesValText.textContent = state.lossStreak;
+      }
+    });
+    lossesInc.addEventListener('click', () => {
+      if (state.lossStreak < 5) {
+        state.lossStreak++;
+        lossesValText.textContent = state.lossStreak;
+      }
+    });
+
+    // Pause Duration
+    pauseDec.addEventListener('click', () => {
+      if (state.pauseHours > 1) {
+        state.pauseHours--;
+        pauseValText.textContent = state.pauseHours + ' hrs';
+      }
+    });
+    pauseInc.addEventListener('click', () => {
+      if (state.pauseHours < 24) {
+        state.pauseHours++;
+        pauseValText.textContent = state.pauseHours + ' hrs';
+      }
+    });
+
+    // Save action
+    saveBtn.addEventListener('click', () => {
+      saveBtn.classList.add('scale-95');
+      setTimeout(() => saveBtn.classList.remove('scale-95'), 150);
+      showToast('RISK PROTOCOLS COMPILED & DEPLOYED');
+    });
+
+    // Reset action
+    resetBtn.addEventListener('click', () => {
+      state = {
+        riskPercent: 1.0,
+        drawdownPercent: 3.0,
+        openTrades: 2,
+        dailyTrades: 6,
+        spreadPips: 2.5,
+        lossStreak: 2,
+        pauseHours: 4
+      };
+      renderRiskCalculations();
+      renderDrawdown();
+      openTradesCount.textContent = state.openTrades;
+      dailyTradesCount.textContent = state.dailyTrades;
+      spreadValText.textContent = state.spreadPips + ' pips';
+      lossesValText.textContent = state.lossStreak;
+      pauseValText.textContent = state.pauseHours + ' hrs';
+      showToast('INSTITUTIONAL DEFAULTS RESTORED');
+    });
+
+    // Init
+    renderRiskCalculations();
+    renderDrawdown();
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container drop-shadow-[0_0_10px_rgba(45,226,255,0.6)] font-bold"><div class="relative flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant transition-all duration-200 hover:text-on-surface" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-caption-caps text-caption-caps tracking-wider mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant transition-all duration-200 hover:text-on-surface" data-path="markets" href="#"><span class="material-symbols-outlined text-[22px]">monitoring</span><span class="font-caption-caps text-caption-caps tracking-wider mt-0.5">Markets</span></a><div class="relative -top-5 flex flex-col items-center justify-center"><a class="w-14 h-14 rounded-full bg-gradient-to-tr from-primary-container to-secondary-container flex items-center justify-center shadow-[0_0_24px_rgba(45,226,255,0.4),0_0_8px_rgba(123,97,255,0.5)] active:scale-95 transition-transform" data-path="bot" href="#"><span class="material-symbols-outlined text-surface-container-lowest font-bold text-[28px]">smart_toy</span></a><span class="font-caption-caps text-caption-caps tracking-wider text-primary mt-1">Bot</span></div><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant transition-all duration-200 hover:text-on-surface" data-path="trades" href="#"><span class="material-symbols-outlined text-[22px]">query_stats</span><span class="font-caption-caps text-caption-caps tracking-wider mt-0.5">Trades</span></a><a class="flex flex-col items-center justify-center w-14 h-14 text-on-surface-variant transition-all duration-200 hover:text-on-surface" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-caption-caps text-caption-caps tracking-wider mt-0.5">Profile</span></a></div></nav></body></html>
